@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:task/view/pages/home_screen.dart';
 import 'package:task/view/shared/constant/colors.dart';
 
@@ -41,32 +42,32 @@ class BottomNavi extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Image.asset(
                   'asset/1-07.png',
-                  width: 54,
-                  height: 50,
+                  width: 6.h,
+                  height: 5.h,
                 ),
                 label: 'الامتحانات',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
                   'asset/1-10.png',
-                  width: 54,
-                  height: 50,
+                  width: 6.h,
+                  height: 5.h,
                 ),
                 label: 'الحساب',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
                   'asset/1-09.png',
-                  width: 54,
-                  height: 50,
+                  width: 6.h,
+                  height: 5.h,
                 ),
                 label: 'تقييم الطالب ',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
                   'asset/1-08.png',
-                  width: 54,
-                  height: 50,
+                  width: 6.h,
+                  height: 5.h,
                 ),
                 label: 'الرئيسية',
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:task/view/pages/bottom_navigations.dart';
 import 'package:task/view/shared/constant/colors.dart';
 
@@ -36,33 +37,33 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(66),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.only(top: 4.h, right: 4.w, left: 4.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Center(
                         child: Image.asset(
                           'asset/31443.png',
-                          height: 240,
-                          width: 240,
+                          height: 22.h,
+                          width: 50.w,
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: 2.h,
                       ),
-                      const Center(
+                      Center(
                         child: Text(
                           'معهد اوكسفورد الحديث التعليمي ',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 26,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 30,
+                      SizedBox(
+                        height: 3.h,
                       ),
                       Row(
                         children: [
@@ -70,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                             icon: 'asset/1-05.png',
                             title: 'أتصل بنا ',
                           ),
-                          const SizedBox(width: 20),
+                          SizedBox(width: 4.w),
                           InkWell(
                             onTap: () {
                               Get.to(BottomNavi());
@@ -82,15 +83,15 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 40,
+                      SizedBox(
+                        height: 4.h,
                       ),
                       TitleTextFeild(
                         title: 'بريد الاكتروني',
                         icon: 'asset/1-10.png',
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: 2.h,
                       ),
                       CustomField(
                         controller: null,
@@ -98,15 +99,15 @@ class LoginScreen extends StatelessWidget {
                         // hinttext: 'Phone',
                         validatorf: (text) => vinputphne(text),
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: 2.h,
                       ),
                       TitleTextFeild(
                         title: 'كلمه المرور',
                         icon: 'asset/1-10.png',
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: 2.h,
                       ),
                       CustomField(
                         controller: null,
@@ -114,15 +115,15 @@ class LoginScreen extends StatelessWidget {
                         // hinttext: 'Password',
                         validatorf: (text) => vinputpassword(text),
                       ),
-                      const SizedBox(
-                        height: 16,
+                      SizedBox(
+                        height: 2.h,
                       ),
                       Text(
                         'نسيت كلمه المرور',
                         style: TextStyle(
                           color: PrimaryKD,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ],
@@ -149,8 +150,8 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 185,
-      height: 58,
+      width: 44.w,
+      height: 7.h,
       decoration: BoxDecoration(
         color: PrimaryKD,
         borderRadius: BorderRadius.circular(
@@ -165,9 +166,9 @@ class CustomCard extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
-              fontSize: 22,
+              fontSize: 16.sp,
               fontWeight: FontWeight.bold,
             ),
           )
@@ -193,15 +194,15 @@ class TitleTextFeild extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
-            fontSize: 22,
+            fontSize: 17.sp,
             fontWeight: FontWeight.bold,
           ),
         ),
         Image.asset(
           icon,
-          width: 50,
+          width: 14.w,
         ),
       ],
     );

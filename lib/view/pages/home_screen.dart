@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../model/sections.dart';
 import '../shared/constant/colors.dart';
@@ -36,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(top: 40, right: 10, left: 10),
+                padding: EdgeInsets.only(top: 4.h, right: 4.w, left: 4.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -44,18 +45,18 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                           'asset/1-13.png',
-                          width: 60,
+                          width: 12.w,
                         ),
                         const Expanded(child: SizedBox()),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
-                          children: const [
+                          children: [
                             Text(
                               'اسم الطالب',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18,
+                                fontSize: 13.sp,
                               ),
                             ),
                             Text(
@@ -63,20 +64,20 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 18,
+                                fontSize: 13.sp,
                               ),
                             )
                           ],
                         ),
                         Image.asset(
                           'asset/1-14.png',
-                          width: 60,
+                          width: 12.w,
                         ),
                       ],
                     ),
                     Container(
                       width: double.infinity,
-                      height: 200,
+                      height: 19.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         image: const DecorationImage(
@@ -86,31 +87,31 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         CircleAvatar(
-                          radius: 6,
+                          radius: 1.5.w,
                           backgroundColor: Colors.white,
                         ),
-                        SizedBox(width: 10),
+                        SizedBox(width: 2.w),
                         CircleAvatar(
-                          radius: 6,
+                          radius: 1.5.w,
                           backgroundColor: Colors.white,
                         ),
-                        SizedBox(width: 10),
+                        SizedBox(width: 2.w),
                         CircleAvatar(
-                          radius: 6,
+                          radius: 1.5.w,
                           backgroundColor: Colors.white,
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 2.h),
                     Stack(
                       clipBehavior: Clip.hardEdge,
                       children: [
                         Image.asset(
                           'asset/1-12.png',
                         ),
-                        const Positioned(
+                        Positioned(
                           right: 75,
                           bottom: 30,
                           child: Text(
@@ -118,20 +119,20 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 24,
+                              fontSize: 17.sp,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 5),
+                    SizedBox(height: 0.5.h),
                     Stack(
                       clipBehavior: Clip.none,
                       children: [
                         Image.asset(
                           'asset/1-11.png',
                         ),
-                        const Positioned(
+                        Positioned(
                           right: 75,
                           bottom: 42,
                           child: Text(
@@ -139,25 +140,24 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 24,
+                              fontSize: 17.sp,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 3.h),
                     Expanded(
                       child: GridView.builder(
                         shrinkWrap: true,
                         clipBehavior: Clip.hardEdge,
                         itemCount: sectionsDate.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                mainAxisExtent: 100,
-                                crossAxisSpacing: 20,
-                                childAspectRatio: 0.4,
-                                crossAxisCount: 2,
-                                mainAxisSpacing: 20),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            mainAxisExtent: 12.h,
+                            crossAxisSpacing: 3.w,
+                            childAspectRatio: 0.4,
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 1.5.h),
                         itemBuilder: (context, index) {
                           return Container(
                             decoration: BoxDecoration(
@@ -182,15 +182,15 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 Image.asset(
                                   sectionsDate[index].image.toString(),
-                                  width: 100,
-                                  height: 70,
+                                  width: 20.w,
+                                  height: 8.h,
                                 ),
                                 Text(
                                   sectionsDate[index].title.toString(),
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 18,
+                                    fontSize: 14.sp,
                                   ),
                                 ),
                               ],
